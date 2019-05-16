@@ -1,0 +1,60 @@
+//H:
+let startDate = datetime(2019-05-04T08:16:00);
+let endDate = datetime(2019-05-04T08:26:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("H:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
+
+//I:
+let startDate = datetime(2019-05-04T08:34:00);
+let endDate = datetime(2019-05-04T08:44:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("I:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
+
+//J:
+let startDate = datetime(2019-05-04T08:52:00);
+let endDate = datetime(2019-05-04T09:02:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("J:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
+
+//K:
+let startDate = datetime(2019-05-04T09:11:00);
+let endDate = datetime(2019-05-04T09:21:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("K:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
+
+//L:
+let startDate = datetime(2019-05-04T09:29:00);
+let endDate = datetime(2019-05-04T09:39:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("L:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
+
+
+//M:
+let startDate = datetime(2019-05-04T09:47:00);
+let endDate = datetime(2019-05-04T09:57:00);
+Perf
+| where TimeGenerated between (startDate .. endDate)
+| where Computer == "TestHV1.bp.local"
+| where (ObjectName == "LogicalDisk" and (InstanceName in ("M:"))) or (ObjectName == "Processor")
+| where (CounterName == "% Processor Time")  or (CounterName == "Disk Transfers/sec") or (CounterName  == "Avg. Disk sec/Transfer")
+| project InstanceName, CounterName, CounterValue 
